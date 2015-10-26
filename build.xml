@@ -1,0 +1,35 @@
+<project name="DiffCDISC" basedir=".">
+	<!-- *************************** -->
+	<!--     Properties              -->
+	<!-- *************************** -->
+
+		<property name="dist.dir" value="./dist"/>
+		<property name="classes.dir" value="./classes"/>
+		<property name="src.dir" value="./src"/>
+
+	<!-- *************************** -->
+	<!--    Targets for building     -->
+	<!-- *************************** -->
+
+		<target name="clean" description="Removes generated artifacts">
+			<delete dir="${classes.dir}" quiet="true"/>
+			<delete file="${dist.dir}/DiffCDISC.jar" quiet="true"/>
+		</target>
+
+		<target name="init" depends="clean" description="Creates necessary directories">
+			<mkdir dir="${classes.dir}"/>
+		</target>
+
+		<target name="compile" depends="init" description="Compiles">
+			<javac srcdir="${src.dir}" destdir="${classes.dir}" encoding="cp1252" debug="true" debuglevel="lines,source"/>
+		</target>
+
+	<!-- *******************************-->
+	<!--    Targets for packaging       -->
+	<!-- *******************************-->
+
+		<target name="build" depends="compile" description="Package code into a jar file">
+			<jar destfile= "${dist.dir}/DiffCDISC.jar" basedir="${classes.dir}"/>
+		</target>
+</project>
+
