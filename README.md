@@ -46,12 +46,22 @@ Running the program
 -------------------
 
 Each report is input into the program (newest followed by oldest),
-followed by a "release date" and then the filename of the output.
+followed by a "release date" and then the filename of the output. Suppose the package is in *C:\\DiffCDISC* , Open a shell window and run:
 
-C:\DiffCDISC\dist>RunChanges "..\docs\SDTM Terminology 2015-09-25.txt" "..\docs\SDTM Terminology 2015-06-26.txt" "9/25/2015" Changes.txt
+```
+cd C:\DiffCDISC\dist
+RunChanges "..\docs\SDTM Terminology 2015-09-25.txt" "..\docs\SDTM Terminology 2015-06-26.txt" "9/25/2015" Changes.txt
+```
+
+If all goes well, you will get in the shell window:
+
+```
 Initializing diff report...
 Getting changes...
 Printing changes report...
+```
+
+The output file Changes.txt will be in *C:\\DiffCDISC\\dist*.
 
 About the program
 -----------------
