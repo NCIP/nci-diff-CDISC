@@ -352,7 +352,8 @@ public class Diff {
 		
 		pw.println("Release Date" + "\t" + "Request Code" + "\t" + "Change Type" + "\t" + 
 				"NCI Code" + "\t" + "CDISC Term Type" + "\t" + "CDISC Codelist (Short Name)" + 
-				"\t" + "CDISC Codelist (Long Name)" + "\t" + "Change Summary" + "\t" + "Original" + "\t" + "New");		
+				"\t" + "CDISC Codelist (Long Name)" + "\t" + "Change Summary" + "\t" + "Original" + "\t" + "New" +
+			  	"\t" + "Change Implementation Instructions");		
 				
 		for(Change c : changes ) {
 			pw.print(c.toString());
